@@ -1,0 +1,50 @@
+
+
+.friends{
+    color:    white;
+    font-size: 18px;
+    font-weight: 800;
+    background: #DBDFDD;
+    margin: 15px;
+    min-height: 190px;
+    border-radius: 20px;
+
+}
+
+h4{
+    text-align: center;
+    margin: 5px;
+
+}
+
+.friendsField {
+    display: flex;
+    flex-wrap: wrap;
+
+    flex-direction: row;
+    margin: 5px;
+    text-align: center;
+
+
+
+}
+.frend{
+
+    width: 50px;
+    margin-bottom: 5px;
+    /*justify-content: center;*/
+    /*align-content: center;*/
+}
+
+.frName {
+    font-size: 13px;
+    text-align: center;
+    line-height: 15px;
+}
+.frend img{
+    margin-left: 5px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 35%;
+}
