@@ -78,44 +78,38 @@ export const toggleIsFetching = (isFetching) => ({type: TOGGLE_IS_FETCHING, isFe
 export const toggleFollowingProgress = (isFetching, userId) => ({type: TOGGLE_IS_FOLLOWING_PROGRESS, isFetching, userId})
 
 export const getUsersThunkCreator = (currentPage, pageSize) => {
-    return (dispatch) => {
+    return async (dispatch) => {
         dispatch(toggleIsFetching(true));
-        usersAPI.getUsers(currentPage, pageSize).then(data => {
-            dispatch(toggleIsFetching(false));
-            dispatch(setUsers(data.items));
-            dispatch(setTotalUsersCount(data.totalCount));
-        })
+        dispatch(setCurrentPage(currentPage))
+        let data = await usersAPI.getUsers(currentPage, pageSize)
+        dispatch(toggleIsFetching(false));
+        dispatch(setUsers(data.items));
+        dispatch(setTotalUsersCount(data.totalCount));
     }
 }
 
 export const unfollowUserThunkCreator = (userId) => {
-    return (dispatch) => {
+    return async (dispatch) => {
         dispatch(toggleFollowingProgress(true, userId));
-        usersAPI.unfollowUserRequest(userId)
-            .then(data => {
-
+        let data = await usersAPI.unfollowUserRequest(userId)
                 if (data.data.resultCode == 0) {
                     dispatch(unfollow(userId))
                 }
                 dispatch (toggleFollowingProgress(false, userId));
-        })
+
     }
 }
 
 export const followUserThunkCreator = (userId) => {
 
-    return (dispatch) => {
+    return async (dispatch) => {
 
         dispatch(toggleFollowingProgress(true, userId));
-        usersAPI.followUserRequest(userId)
-            .then(data => {
-
-                if (data.data.resultCode == 0) {
-                    dispatch(follow(userId))
-
+        let data = await usersAPI.followUserRequest(userId)
+            if (data.data.resultCode == 0) {
+            dispatch(follow(userId))
                 }
-                dispatch (toggleFollowingProgress(false, userId));
-            })
+            dispatch (toggleFollowingProgress(false, userId));
     }
 }
 

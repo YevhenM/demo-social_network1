@@ -5,21 +5,35 @@ import {NavLink} from "react-router-dom";
 
 let Users = (props) => {
 
-        let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
-        let pages = [];
-        let startPageInList = props.currentPage - 3
-        startPageInList<1 ? startPageInList=1 : startPageInList=startPageInList
-        startPageInList+6>pagesCount ? startPageInList = pagesCount-6 : startPageInList=startPageInList
-        for (let i=startPageInList; i<=startPageInList+6; i++) {
-            pages.push(i);
+        function pagesList(numberOfPages, currentPage, listLenght) {
+            let array = []
+            let centerPage = currentPage
+                if (centerPage<listLenght + 1) {centerPage = listLenght + 1}
+                if (centerPage>numberOfPages - listLenght) {centerPage = numberOfPages - listLenght}
+            let startPageBlock = centerPage - listLenght
+            let finishPageBlock = centerPage + listLenght
+
+            if (startPageBlock>1) {array.push(1)}
+            if (startPageBlock>2)  {array.push('...')}
+            for (let i=startPageBlock; i<=finishPageBlock; i++) {array.push(i)}
+            if (finishPageBlock<numberOfPages-1)  {array.push('...')}
+            if (finishPageBlock<numberOfPages)  {array.push(numberOfPages)}
+
+            return array
         }
+
+        let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
+
+
+    let arr = pagesList(pagesCount, props.currentPage, 8)
+
 
     return <div>
         <div className={s.pageSelector}>
             <span>Page:</span>
-            {pages.map(p=>{
+            {arr.map(p=>{
                 return <span className={props.currentPage === p && s.selectedPage}
-                             onClick={(e) =>{props.onPageChanged(p)}}>{" "}{ p }{" "}</span>
+                    onClick={p=="..." ? null :((e) =>{props.onPageChanged(p)})}>{" ["}{ p }{"] "}</span>
             })}
         </div>
 
