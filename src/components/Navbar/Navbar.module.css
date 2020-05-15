@@ -1,0 +1,41 @@
+.nav{
+    grid-area: n;
+    background: rgb(192, 221, 224);
+    min-height: 400px;
+    line-height: 30px;
+  }
+  .list {
+      margin-top: 40px;
+  }
+
+  .item{
+      color:    white;
+  }
+
+  .item a{
+      margin: 40px;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 800;
+  }
+
+  .item a.active{
+    color: #447e99;
+  }
+   .item a.active span{
+        display: inline;
+        font-size: 16px;
+        font-weight: 800;
+}
+.item a span{
+    
+    display: none;
+}
+
+.friends{
+    color:    white;
+    font-size: 18px;
+    font-weight: 800;
+
+}

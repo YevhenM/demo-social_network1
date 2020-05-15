@@ -1,0 +1,85 @@
+/*.userpic{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    !*position: absolute;*!
+    margin: 5px 15px 0px 10px;
+}*/
+
+/*.userBox {
+    display: flex;
+    background: #EEE2D4;
+    width: 800px;
+    margin: 10px;
+    padding-bottom: 5px;
+    overflow: hidden;
+    border-radius: 20px;
+}*/
+
+/*.userPicAndButton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}*/
+
+.selectedPage{
+    font-weight: bold;
+    color: #DBDFDD;
+    background-color: #554B33;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 100%;
+    line-height: 30px;
+}
+
+.pageNumberBox{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.divide{
+    width: 10px;
+    height: 30px;
+}
+
+.pageSelector{
+    margin-left: 116px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.pageSelector>div{
+
+    cursor: pointer;
+}
+
+/*.location{
+    font-size: 10px;
+    padding-left: 5px;
+    !*background: orange;*!
+}*/
+
+/*.userName{
+    padding-top: 12px;
+    color: #554b33;
+    font-weight: 800;
+    font-size: 18px;
+
+}*/
+
+.status{
+    color: #4B676A;
+    font-size: 14px;
+    font-style: italic;
+    padding-left: 5px;
+
+}
+
+.butFolow{
+    color: #f00
+}

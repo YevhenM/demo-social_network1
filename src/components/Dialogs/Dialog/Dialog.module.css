@@ -1,0 +1,35 @@
+
+
+.dialog{
+    font-size: 14px;
+    font-weight: 800;
+    margin: 10px auto auto 30px;
+    
+}
+
+.dialog a{
+    color: rgb(104, 101, 60);
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.dialog a.active{
+    color: #447e99;
+}
+
+.dialog a span{
+    display:none;
+
+}
+
+.dialog a.active span{
+    display:inline;
+}
+.dialog img{
+    width: 30px;
+    height: 30px;
+    border-radius: 40%;
+}
+

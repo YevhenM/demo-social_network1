@@ -1,0 +1,60 @@
+/* .content{
+    grid-area: c;
+    background: rgb(219, 223, 221);
+  } */
+
+.userpic{
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  position: absolute;
+  margin: 15px;
+  margin-left: 95px;
+  z-index: 10;
+}  
+
+.item{
+  display: flex;
+  /*border: 1px solid red;*/
+}
+
+.textBlock{
+  margin: 10px auto auto 130px;
+  min-width: 540px;
+  max-width: 540px;
+  min-height: 60px;
+  background: #eee2d4;
+  border-radius: 20px;
+  padding: 20px;
+  color: rgb(104, 101, 60);
+  font-size: 14px;
+  font-weight: 800;
+  position: relative;
+
+}
+.likes{
+  position: absolute;
+  width: 90px;
+  height: 20px;
+  right: 50px;
+  bottom: 4px;
+}
+
+.deleteButton{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 10px;
+  top: 10px;
+  /*background: #f8ecde;*/
+  border-radius: 50%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.deleteButton:hover{
+    background: #ff8580;
+    cursor: pointer;
+    color: #eee2d4;
+}

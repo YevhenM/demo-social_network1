@@ -1,0 +1,27 @@
+.dialogs{
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+    grid-gap: 10px;
+}
+
+.dialogsItems{
+    background: #EEE2D4;
+    min-height: 280px;
+    margin:10px;
+    border-radius: 20px;
+    color: rgb(104, 101, 60);
+   
+   
+
+}
+
+
+
+
+.messages{
+
+}
+
+.message{
+
+}

@@ -1,0 +1,49 @@
+
+  .item{
+    color: green;
+  }
+
+  .cover {
+    width: 100%;
+    /*padding: 10px 10px;*/
+    /*border-radius: 30px;*/
+  }
+
+  .userpic{
+    margin-left: 100px;
+    position: relative;
+    /*margin-top: -50%;*/
+  }
+
+  .userpic>img{
+    border-radius: 100%;
+    width: 80px;
+  }
+
+  .profileinfoBox{
+    padding-top: 15px;
+    display: flex;
+  }
+
+  .textBloc {
+    color: rgb(104, 101, 60);
+    font-size: 14px;
+    font-weight: 800;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    max-width: 320px;
+  }
+
+  .userName {
+    font-size: 18px;
+    color: rgb(56, 53, 28);
+  }
+
+  .contacts{
+    color: rgb(104, 101, 60);
+    font-size: 12px;
+    font-weight: 800;
+    padding-left: 10px;
+    text-align: right;
+
+  }

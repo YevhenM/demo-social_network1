@@ -2,6 +2,7 @@ import React from 'react';
 import s from "./users.module.css";
 import userPhoto from "../assets/images/maleUser.jpg";
 import {NavLink} from "react-router-dom";
+import Pagenator from "./Pagenator/Pagenator";
 
 let Users = (props) => {
 
@@ -29,13 +30,12 @@ let Users = (props) => {
 
 
     return <div>
-        <div className={s.pageSelector}>
-            <span>Page:</span>
-            {arr.map(p=>{
-                return <span className={props.currentPage === p && s.selectedPage}
-                    onClick={p=="..." ? null :((e) =>{props.onPageChanged(p)})}>{" ["}{ p }{"] "}</span>
-            })}
-        </div>
+
+        <Pagenator currentPage={props.currentPage}
+                   onPageChanged={props.onPageChanged}
+                   totalUsersCount={props.totalUsersCount}
+                   pageSize={props.pageSize}
+                    />
 
         {   props.users.map( u => <div className={s.userBox} key={u.id}>
                 <span className={s.userPicAndButton}>
@@ -72,6 +72,11 @@ let Users = (props) => {
                 </span>
         </div>)
         }
+        <Pagenator currentPage={props.currentPage}
+                   onPageChanged={props.onPageChanged}
+                   totalUsersCount={props.totalUsersCount}
+                   pageSize={props.pageSize}
+        />
     </div>
 }
 

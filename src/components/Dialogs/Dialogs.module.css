@@ -1,0 +1,37 @@
+.dialogs{
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+    grid-gap: 10px;
+}
+
+.dialogsItems{
+    background: #EEE2D4;
+    min-height: 280px;
+    margin:10px;
+    border-radius: 20px;
+    color: rgb(104, 101, 60);
+  
+};
+
+.mess{
+    position: absolute;
+    bottom: 0px;
+    background: darkolivegreen;
+    height: 50px;
+    width: 300px;
+    border: 2 solid red;
+};
+
+/*.mess div{
+    background: #447e99;
+}*/
+
+
+
+
+.messages{
+    position: relative;
+
+}
+
+
