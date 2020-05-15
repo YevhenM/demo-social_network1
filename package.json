@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/YevhenM/demo-social_network.git",
+  "homepage": "https://github.com/YevhenM/demo-social_network1.git",
   "dependencies": {
     "axios": "^0.19.0",
     "gh-pages": "^2.2.0",
